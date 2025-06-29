@@ -13,6 +13,10 @@ const groq = new Groq({
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome To The Main Server!');
+});
+
 app.post('/api/chat', async (req, res) => {
   const color = req.body.message;
 
